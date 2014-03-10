@@ -35,19 +35,19 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $column-gutter: rem-calc(30);
-// $total-columns: 12;
+$row-width: rem-calc(1000);
+$column-gutter: rem-calc(30);
+$total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: normal;
-// $body-font-style: normal;
+ $body-bg: #fff;
+ $body-font-color: #222;
+ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-font-weight: normal;
+ $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+ $font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -502,7 +502,7 @@
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
-// $fieldset-border-color: #ddd;
+// $fieldset-border-color: #;
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
@@ -1127,7 +1127,7 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+// $topbar-bg-color: #fff;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
