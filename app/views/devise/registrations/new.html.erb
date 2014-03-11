@@ -1,0 +1,47 @@
+<div class="row">
+<div class="large-5 columns">
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<br />
+<div class="panel callout radius">
+<h5>This is a callout panel with radiused edges.</h5>
+<p>It's a little ostentatious, but useful for important content.</p>
+</div>
+<br />
+<div class="panel callout radius">
+<h5>This is a callout panel with radiused edges.</h5>
+<p>It's a little ostentatious, but useful for important content.</p>
+</div>
+<br />
+<div class="panel callout radius">
+<h5>This is a callout panel with radiused edges.</h5>
+<p>It's a little ostentatious, but useful for important content.</p>
+</div>
+<br />
+<div class="panel callout radius">
+<h5>This is a callout panel with radiused edges.</h5>
+<p>It's a little ostentatious, but useful for important content.</p>
+</div>
+<br />
+
+<%= render "devise/shared/links" %>
+<br />
+</div>
+</div>
+
+</div>
