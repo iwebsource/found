@@ -42,6 +42,7 @@ $total-columns: 12;
 // We use these to control various global styles
  $body-bg: #DDD;
  $body-font-color: #222;
+ //$body-font-family: "Open Sans Condensed Light";
  $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
  $body-font-weight: normal;
  $body-font-style: normal;
@@ -1201,5 +1202,5 @@ $total-columns: 12;
 // $include-html-visibility-classes: $include-html-classes;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
-
+$include-open-sans: false !default;
 @import 'foundation';
