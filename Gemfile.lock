@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/lassebunk/gretel.git
-  revision: c09a67dd08d190879a6c68accdb784033ea6d2b9
-  specs:
-    gretel (3.0.5)
-      rails (>= 3.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +41,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    crummy (1.8.0)
     devise (3.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -178,10 +172,10 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  crummy (~> 1.8.0)
   devise
   foundation-rails
   foundation_rails_helper
-  gretel!
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks

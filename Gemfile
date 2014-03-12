@@ -37,6 +37,7 @@ gem 'foundation_rails_helper'
 gem 'modernizr'
 gem 'devise'
 gem 'rails_admin'
+gem 'crummy', '~> 1.8.0'
 
 group :development do
   gem 'rails_layout'
