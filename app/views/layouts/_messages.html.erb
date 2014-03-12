@@ -1,4 +1,6 @@
 <%# Rails flash messages styled for Zurb Foundation %>
+<div class="row">
+<div class="large-12 columns">
 <br />
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
@@ -8,3 +10,5 @@
     </div>
   <% end %>
 <% end %>
+</div>
+</div>

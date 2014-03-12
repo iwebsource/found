@@ -1,4 +1,10 @@
 Found::Application.routes.draw do
+  resources :coding_langs
+
+  resources :project_issues
+
+  resources :projects
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get "home/index"

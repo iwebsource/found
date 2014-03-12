@@ -37,7 +37,6 @@ gem 'foundation_rails_helper'
 gem 'modernizr'
 gem 'devise'
 gem 'rails_admin'
-gem 'breadcrumbs_on_rails'
 
 group :development do
   gem 'rails_layout'

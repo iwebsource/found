@@ -1,0 +1,28 @@
+<div class="row">
+<div class="large-5 columns">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project_issue.name %>
+</p>
+
+<p>
+  <strong>Code lang:</strong>
+  <%= @project_issue.code_lang_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_issue.project_id %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @project_issue.summary %>
+</p>
+
+<%= link_to 'Edit', edit_project_issue_path(@project_issue) %> |
+<%= link_to 'Back', project_issues_path %>
+</div>
+</div>

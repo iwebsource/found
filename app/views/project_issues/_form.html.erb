@@ -1,0 +1,33 @@
+<div class="row">
+<div class="large-5 columns">
+<%= form_for(@project_issue) do |f| %>
+  <% if @project_issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project_issue.errors.count, "error") %> prohibited this project_issue from being saved:</h2>
+
+      <ul>
+      <% @project_issue.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.number_field :code_lang_id %>
+  </div>
+  <div class="field">
+    <%= f.number_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.text_area :summary %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+</div>

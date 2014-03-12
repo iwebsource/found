@@ -1,0 +1,29 @@
+<h1>Listing coding_langs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coding_langs.each do |coding_lang| %>
+      <tr>
+        <td><%= coding_lang.name %></td>
+        <td><%= coding_lang.description %></td>
+        <td><%= link_to 'Show', coding_lang %></td>
+        <td><%= link_to 'Edit', edit_coding_lang_path(coding_lang) %></td>
+        <td><%= link_to 'Destroy', coding_lang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coding lang', new_coding_lang_path %>
