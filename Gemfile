@@ -36,6 +36,7 @@ gem 'foundation-rails'
 gem 'foundation_rails_helper'
 gem 'modernizr'
 gem 'devise'
+gem 'rails_admin'
 
 group :development do
   gem 'rails_layout'
