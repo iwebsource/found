@@ -1,14 +1,15 @@
 Found::Application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  get "home/index"
+  get '/about' => 'home#about'
+  
   resources :coding_langs
 
   resources :project_issues
 
   resources :projects
 
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  get "home/index"
-  get '/about' => 'home#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

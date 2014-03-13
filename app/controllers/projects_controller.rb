@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  add_crumb("Projects") { |instance| instance.send :projects_path }
   before_filter :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
