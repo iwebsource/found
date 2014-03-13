@@ -1,3 +1,4 @@
 class Project < ActiveRecord::Base
-	belongs_to :user
+	belongs_to :users
+	has_many :project_issues
 end

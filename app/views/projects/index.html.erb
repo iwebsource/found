@@ -1,3 +1,4 @@
+<% breadcrumb :projects, @projects %>
 <div class="row">
 <div class="large-10 columns">
 <h1>Listing projects</h1>
@@ -33,7 +34,9 @@
 </table>
 
 <br>
-
+<span data-tooltip data-options="disable_for_touch:true" class="has-tip [tip-right] [radius round]" title="Tooltips are awesome, you should totally use them!">extended information</span>
+<br />
+<br />
 <%= link_to 'New Project', new_project_path %>
 </div>
 </div>
