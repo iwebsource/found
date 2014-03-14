@@ -9,7 +9,6 @@ end
 
 crumb :about do
   link "About", root_path, title: "Welcome!"
-  parent :home
 end
 
 ## Project Section ##
@@ -41,6 +40,10 @@ end
    crumb :project_edit do
    link "Edit Project", edit_project_path
    parent :projects
+ end
+
+   crumb :users do
+   link "Sign In", @login
  end
 # crumb :project_issues do |project|
 #   link "Issues", project_issues_path(project)
