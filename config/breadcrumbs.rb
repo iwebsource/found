@@ -12,6 +12,8 @@ crumb :about do
   parent :home
 end
 
+## Project Section ##
+
  crumb :projects do
    link "Project Dashboard", projects_path
  end
@@ -29,6 +31,16 @@ end
  crumb :project_issue do |project_issue|
    link project_issue.name, project_issues_path(project_issue)
    parent :project_issues
+ end
+
+  crumb :project_new do
+   link "New Project", new_project_path
+   parent :projects
+ end
+
+   crumb :project_edit do
+   link "Edit Project", edit_project_path
+   parent :projects
  end
 # crumb :project_issues do |project|
 #   link "Issues", project_issues_path(project)

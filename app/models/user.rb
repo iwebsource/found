@@ -8,6 +8,4 @@ class User < ActiveRecord::Base
 		current_user && current_user.is_admin
 	end
 
-	has_many :projects
-
 end
