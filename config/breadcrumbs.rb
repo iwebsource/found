@@ -13,7 +13,7 @@ crumb :about do
 end
 
  crumb :projects do
-   link "Projects", projects_path
+   link "Project Dashboard", projects_path
  end
 
  crumb :project do |project|
@@ -23,6 +23,7 @@ end
 
  crumb :project_issues do
    link "Project Issues", project_issues_path
+   parent :projects
  end
 
  crumb :project_issue do |project_issue|

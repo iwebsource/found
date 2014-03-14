@@ -56,12 +56,12 @@ $total-columns: 12;
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+ $primary-color: #008CBA;
+ $secondary-color: #e7e7e7;
+ $alert-color: #f04124;
+ $success-color: #43AC6A;
+ $warning-color: #f08a24;
+ $info-color: #a0d3e8;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -1039,7 +1039,7 @@ $total-columns: 12;
 // These control the table cell border style
  $table-border-style: solid;
  $table-border-size: 1px;
- $table-border-color: #eee;
+ $table-border-color: #5791ba;
 
 // These control the table head styles
 // $table-head-bg: #f5f5f5  ;
@@ -1132,7 +1132,7 @@ $total-columns: 12;
  $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+// $topbar-height: 55px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
