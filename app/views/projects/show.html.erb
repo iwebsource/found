@@ -1,8 +1,7 @@
-<% breadcrumb :projects, @projects_name %>
+<% breadcrumb :projects, @project.name %>
 <div class="row">
 <div class="large-5 columns">
-<p id="notice"><%= notice %></p>
-
+<div class="panel callout radius">
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
@@ -27,8 +26,10 @@
   <strong>Notes:</strong>
   <%= @project.notes %>
 </p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<ul class="button-group">
+<li><%= link_to 'Edit', edit_project_path(@project), :class => 'tiny button success' %></li>
+<li><%= link_to 'Back', projects_path, :class => 'tiny button success' %></li>
+</ul>
+</div>
 </div>
 </div>
