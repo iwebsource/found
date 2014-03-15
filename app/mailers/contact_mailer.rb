@@ -1,7 +1,7 @@
 class ContactMailer< ActionMailer::Base
  
-default :from => "noreply@youdomain.dev"
-default :to => "you@youremail.dev"
+default :from => "noreply@iwebdev.ca"
+default :to => "iwebsource1@gmail.com"
  
 def new_message(message)
 @message = message
