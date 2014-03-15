@@ -1,6 +1,11 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  def create
+  @user = User.create( user_params )
+end
+
+private
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
