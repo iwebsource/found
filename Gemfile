@@ -38,6 +38,7 @@ gem 'modernizr'
 gem 'devise'
 gem 'rails_admin'
 gem 'gretel'
+gem "paperclip", "~> 4.1"
 
 group :development do
   gem 'rails_layout'
