@@ -14,7 +14,7 @@ Found::Application.routes.draw do
   resources :home
 
 match 'contact' => 'contact#new', :as => 'contact', :via => :get
-match 'contact' => 'contact#create', :as => 'contact', :via => :post
+match 'contact_new' => 'contact#create', :as => 'contact', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
