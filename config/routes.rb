@@ -4,6 +4,9 @@ Found::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get "home/index"
   get '/about' => 'home#about'
+
+  get 'contact' => 'contact#new', :as => 'contact'
+  post 'contact' => 'contact#create'
   
   resources :coding_langs
 
@@ -13,8 +16,6 @@ Found::Application.routes.draw do
 
   resources :home
 
-get 'contact' => 'contact#new', :as => 'contact'
-post 'contact' => 'contact#create'
 #match 'contact' => 'contact#new', :as => 'contact', :via => :get
 #match 'contact_new' => 'contact#create', :as => 'contact', :via => :post
 
