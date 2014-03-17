@@ -32,15 +32,15 @@
 
 // Grid
 
-// $include-html-grid-classes: $include-html-classes;
-// $include-xl-html-grid-classes: false;
+ //$include-html-grid-classes: $include-html-classes;
+ //$include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(1000);
+//$row-width: rem-calc(1000);
 $column-gutter: rem-calc(30);
-$total-columns: 12;
+//$total-columns: 12;
 
 // We use these to control various global styles
- $body-bg: #DDD;
+ $body-bg: #fff;
  $body-font-color: #222;
  //$body-font-family: "Open Sans Condensed Light";
  $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -885,9 +885,9 @@ $total-columns: 12;
 // $reveal-close-weight: bold;
 
 // We use these to control the modal border
-// $reveal-border-style: solid;
-// $reveal-border-width: 1px;
-// $reveal-border-color: #666;
+ $reveal-border-style: solid;
+ $reveal-border-width: 2px;
+ $reveal-border-color: #5791ba;
 
 // $reveal-modal-class: "reveal-modal";
 // $close-reveal-modal-class: "close-reveal-modal";
