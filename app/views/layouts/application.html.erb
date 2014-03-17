@@ -19,5 +19,19 @@
     </main>
     <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <script>
+        $(document).foundation({
+            orbit: {
+                animation: 'fade',
+                timer_speed: 1200,
+                pause_on_hover: false,
+                resume_on_mouseout: true,
+                animation_speed: 700,
+                navigation_arrows: true,
+                bullets: false,
+                next_on_click: true
+            }
+        });
+    </script>
   </body>
 </html>
