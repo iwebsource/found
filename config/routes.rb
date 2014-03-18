@@ -16,6 +16,8 @@ Found::Application.routes.draw do
 
   resources :home
 
+  resources :status_tables
+
 #match 'contact' => 'contact#new', :as => 'contact', :via => :get
 #match 'contact_new' => 'contact#create', :as => 'contact', :via => :post
 
