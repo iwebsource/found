@@ -7,7 +7,7 @@ Found::Application.routes.draw do
 
   get 'contact' => 'contact#new', :as => 'contact'
   post 'contact' => 'contact#create'
-  
+
   resources :coding_langs
 
   resources :project_issues
