@@ -14,10 +14,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => true %>
   </div>
   <div class="field">
-    <%= f.number_field :product_id %>
+    <%= f.number_field :product_id, :required => true %>
   </div>
   <div class="field">
     <%= f.date_select :start_date %>
