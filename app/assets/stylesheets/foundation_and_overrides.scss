@@ -35,9 +35,9 @@
  //$include-html-grid-classes: $include-html-classes;
  //$include-xl-html-grid-classes: false;
 
-//$row-width: rem-calc(1000);
-$column-gutter: rem-calc(30);
-//$total-columns: 12;
+$row-width: 100%;
+$column-gutter: rem-calc(50);
+$total-columns: 12;
 
 // We use these to control various global styles
  $body-bg: #fff;
@@ -709,15 +709,15 @@ $column-gutter: rem-calc(30);
 // We use these to control the left/right nav styles
 // $orbit-nav-bg: none;
 // $orbit-nav-bg-hover: rgba(0,0,0,0.3);
-// $orbit-nav-arrow-color: #fff;
-// $orbit-nav-arrow-color-hover: #fff;
+ $orbit-nav-arrow-color: #00204b;
+ $orbit-nav-arrow-color-hover: #9ee2ff;
 
 // We use these to control the timer styles
 // $orbit-timer-bg: rgba(255,255,255,0.3);
-// $orbit-timer-show-progress-bar: true;
+ $orbit-timer-show-progress-bar: true;
 
 // We use these to control the bullet nav styles
-// $orbit-bullet-nav-color: #ccc;
+ $orbit-bullet-nav-color: #ccc;
 // $orbit-bullet-nav-color-active: #999;
 // $orbit-bullet-radius: rem-calc(9);
 
@@ -727,8 +727,8 @@ $column-gutter: rem-calc(30);
 // $orbit-slide-number-padding: rem-calc(5);
 
 // Graceful Loading Wrapper and preloader
-// $wrapper-class: "slideshow-wrapper";
-// $preloader-class: "preloader";
+ $wrapper-class: "slideshow-wrapper";
+ $preloader-class: "preloader";
 
 // Pagination
 
