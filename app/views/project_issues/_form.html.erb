@@ -18,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :code_lang_id, "Select Development Language" %>
-    <%= f.collection_select :code_lang_id, CodingLang.all, :id, :name, :required => true %>
+    <%= f.collection_select :code_lang_id, CodingLang.all, :id, :name, :required => true, :include_blank => 'Make a Selection' %>
   </div>
   <div class="field">
     <%= f.label :project_id, "Select Project" %>
