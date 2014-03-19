@@ -17,7 +17,7 @@
     <%= f.text_field :name, :required => true, :placeholder => "Name of Project" %>
   </div>
   <div class="field">
-    <%= f.label :product_id, "Select the type of Project" %>
+    <%= f.label :product_id, "Select the type of Product" %>
     <%= f.collection_select :product_id, Product.all, :id, :name, :required => true %>
   </div>
     <fieldset>
