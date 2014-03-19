@@ -1,4 +1,5 @@
 Found::Application.routes.draw do
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -17,6 +18,8 @@ Found::Application.routes.draw do
   resources :home
 
   resources :status_tables
+
+  resources :products
 
 #match 'contact' => 'contact#new', :as => 'contact', :via => :get
 #match 'contact_new' => 'contact#create', :as => 'contact', :via => :post

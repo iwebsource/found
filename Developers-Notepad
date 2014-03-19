@@ -24,3 +24,12 @@ Accordion 			zf-accordion + tab
 Tabs 				zf-tab + tab
 Vertical Tabs 		zf-vertical-tab + tab
 
+
+
+
+HISTORY:
+---------
+rails generate migration AddProjectIdToStatusTable
+rails generate migration AddCodeLangIdToProjects
+Product: Belongs to Project. Project has many projects
+rails g scaffold product name:string project_id:integer details:text
