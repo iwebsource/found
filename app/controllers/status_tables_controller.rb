@@ -9,3 +9,4 @@ class StatusTablesController < ApplicationController
   def new
     @status_tables = StatusTable.new
   end
+end
