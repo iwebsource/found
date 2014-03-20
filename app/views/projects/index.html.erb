@@ -9,6 +9,7 @@
     <tr>
       <th>Project Name</th>
       <th>Project Type</th>
+      <th>Development Language</th>
       <th>Project Summary</th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
       <tr>
         <td><%= link_to project.name, project %></td>
         <td><%= Product.find(project.product_id).name %></td>
+        <td><%= CodingLang.find(project.code_lang_id).name %></td>
         <td><%= project.notes %></td>
       </tr>
     <% end %>

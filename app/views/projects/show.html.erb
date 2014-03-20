@@ -19,7 +19,7 @@
 
 <p>
   <strong>Development Language:</strong>
-  <%= @project.code_lang_id %>
+  <%= CodingLang.find(@project.code_lang_id).name %>
 </p>
 
 <p>
