@@ -1,41 +1,29 @@
 <% breadcrumb :projects, @projects %>
+<br />
 <div class="row">
-
 <!-- Left Section -->
 <div class="large-8 columns">
-<h3>Listing projects</h3>
+<h3><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Project name</b> for more details.">Project Dashboard</span></h3>
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Product</th>
-      <th>Start date</th>
-      <th>End date</th>
+      <th>Project Name</th>
+      <th>Project Type</th>
       <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.name %></td>
-        <td><%= project.product_id %></td>
-        <td><%= project.start_date %></td>
-        <td><%= project.end_date %></td>
+        <td><%= link_to project.name, project %></td>
+        <td><%= Product.find(project.product_id).name %></td>
         <td><%= project.notes %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-<span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-right radius" title="Tooltips are awesome, you should totally use them!">extended information</span>
 <br />
 <br />
 <%= link_to 'Create a new Project', new_project_path, :class => 'small button' %>

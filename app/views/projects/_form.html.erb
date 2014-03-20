@@ -18,13 +18,12 @@
   </div>
   <div class="field">
     <%= f.label :product_id, "Select the type of Product" %>
-    <%= f.collection_select :product_id, Product.all, :id, :name, :required => true %>
+    <%= f.collection_select :product_id, Product.all, :id, :name, :include_blank => false, :required => true %>
   </div>
     <fieldset>
     <legend>Select the Start and Estimated End Date</legend>
   <div class="field">
     <%= f.date_select :start_date %>
-
 
     <%= f.date_select :end_date %>
   </div>

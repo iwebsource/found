@@ -3,13 +3,13 @@
 <div class="large-5 columns">
 <div class="panel callout radius">
 <p>
-  <strong>Name:</strong>
+  <strong>Project Name:</strong>
   <%= @project.name %>
 </p>
 
 <p>
   <strong>Product:</strong>
-  <%= @project.product_id %>
+  <%= Product.find(@project.product_id).name %>
 </p>
 
 <p>
@@ -27,8 +27,9 @@
   <%= @project.notes %>
 </p>
 <ul class="button-group">
-<li><%= link_to 'Edit', edit_project_path(@project), :class => 'tiny button success' %></li>
+<li><%= link_to 'Edit Project', edit_project_path(@project), :class => 'tiny button success' %></li>
 <li><%= link_to 'Back', projects_path, :class => 'tiny button success' %></li>
+<li><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'tiny button alert' %></li>
 </ul>
 </div>
 </div>

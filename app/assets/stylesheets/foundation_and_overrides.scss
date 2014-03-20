@@ -871,11 +871,11 @@ $total-columns: 12;
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
+$reveal-modal-bg: #DDD;
 // $reveal-position-top: 50px;
-// $reveal-default-width: 80%;
+$reveal-default-width: 75%;
 // $reveal-modal-padding: rem-calc(20);
-// $reveal-box-shadow: 0 0 10px rgba(#000,.4);
+$reveal-box-shadow: 0 0 15px rgba(#000,.4);
 
 // We use these to style the reveal close button
 // $reveal-close-font-size: rem-calc(22);
@@ -1132,15 +1132,15 @@ $total-columns: 12;
  $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 55px;
+ $topbar-height: 50px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
-// $topbar-title-weight: normal;
+ $topbar-title-weight: bold;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+ $topbar-dropdown-bg: #00204b;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
@@ -1170,7 +1170,7 @@ $total-columns: 12;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+ $topbar-dropdown-label-bg: #00204b;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
