@@ -8,8 +8,23 @@
 </p>
 
 <p>
-  <strong>Product:</strong>
+  <strong>Project Summary:</strong>
+  <%= @project.notes %>
+</p>
+
+<p>
+  <strong>Project Type:</strong>
   <%= Product.find(@project.product_id).name %>
+</p>
+
+<p>
+  <strong>Development Language:</strong>
+  <%= @project.code_lang_id %>
+</p>
+
+<p>
+  <strong>Project Description:</strong>
+  <%= @project.description %>
 </p>
 
 <p>
@@ -22,10 +37,6 @@
   <%= @project.end_date %>
 </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @project.notes %>
-</p>
 <ul class="button-group">
 <li><%= link_to 'Edit Project', edit_project_path(@project), :class => 'tiny button success' %></li>
 <li><%= link_to 'Back', projects_path, :class => 'tiny button success' %></li>

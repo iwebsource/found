@@ -14,11 +14,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, :required => true, :placeholder => "Name of Project" %>
+    <%= f.text_field :name, :label => 'Project Name', :required => true, :placeholder => "Name of Project" %>
+  </div>
+    <div class="field">
+    <%= f.text_field :notes, :label => 'Project Summary', :required => true, :placeholder => "Enter a Short Summary" %>
   </div>
   <div class="field">
-    <%= f.label :product_id, "Select the type of Product" %>
+    <%= f.label :product_id, "Select the type of Project" %>
     <%= f.collection_select :product_id, Product.all, :id, :name, :include_blank => false, :required => true %>
+  </div>
+    <div class="field">
+    <%= f.label :code_lang_id, "Select the Development language" %>
+    <%= f.collection_select :code_lang_id, CodingLang.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.text_area :description, :label => 'Project Description', :required => true, :placeholder => "Enter the details about your Project." %>
   </div>
     <fieldset>
     <legend>Select the Start and Estimated End Date</legend>
@@ -28,9 +38,6 @@
     <%= f.date_select :end_date %>
   </div>
   </fieldset>
-  <div class="field">
-    <%= f.text_area :notes, :placeholder => "Enter details about your project here" %>
-  </div>
   <br />
   <div class="actions">
     <%= f.submit %>
