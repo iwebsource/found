@@ -25,6 +25,10 @@ Tabs 				zf-tab + tab
 Vertical Tabs 		zf-vertical-tab + tab
 
 
+HELPER NOTES:
+-------------
+- How to manually remove column from the console:
+ActiveRecord::Migration.remove_column :table_name, :column_name
 
 
 HISTORY:
@@ -34,3 +38,9 @@ rails generate migration AddProjectIssueIdToStatusTable
 rails generate migration AddCodeLangIdToProjects
 Product: Belongs to Project. Project has many projects
 rails g scaffold product name:string project_id:integer details:text
+rails g migration ProjectIssuesPriorityStatusUpdate
+
+
+
+
+
