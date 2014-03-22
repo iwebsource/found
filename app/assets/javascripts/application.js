@@ -15,12 +15,10 @@
 //= require jquery_ujs
 //= require foundation
 //= require foundation-datetimepicker
+//= require_tree .
 //
 $(function() {
   $(document).foundation();
-});
-$( document ).ready(function() {
- $('#dp1').fdatepicker();
 });
 //
 //= require turbolinks
