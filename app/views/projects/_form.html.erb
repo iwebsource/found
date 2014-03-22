@@ -13,12 +13,6 @@
     </div>
   <% end %>
 
-  <div class="panel">
-<div class="row date collapse" id="dp1" data-date="03-21-2014" data-date-format="dd-mm-yyyy">
-<input class="small-3 columns" size="16" type="text" value="03-21-2014" readonly> <span class="prefix small-2 columns end"><i class="fi-calendar"></i></span>
-
-</div>
-</div>
 
   <div class="field">
     <%= f.text_field :name, :label => 'Project Name', :required => true, :placeholder => "Name of Project" %>
@@ -37,14 +31,18 @@
   <div class="field">
     <%= f.text_area :description, :label => 'Project Description', :required => true, :placeholder => "Enter the details about your Project." %>
   </div>
-    <fieldset>
-    <legend>Select the Start and Estimated End Date</legend>
   <div class="field">
-    <%= f.text_field :start_date, id: "dp1", value: "31.01.2014" %>
-
+      <fieldset>
+      <legend>Fieldset Legend</legend>
+      <%= f.label :start_date, "Start Date" %>
+      <div class="row date collapse" id="dp1" data-date="03-21-2014" data-date-format="dd-mm-yyyy">
+      <input class="small-3 columns" size="16" type="text" value="03-21-2014" name="project[start_date]" readonly> <span class="postfix radius small-2 columns end"><i class="fi-calendar"></i></span>
+      </div>
+      </div>
+      </fieldset>
+ <div class="field">
     <%= f.date_select :end_date %>
   </div>
-  </fieldset>
   <br />
   <div class="actions">
     <%= f.submit %>
