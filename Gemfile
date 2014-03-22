@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,6 +40,7 @@ gem 'rails_admin'
 gem 'gretel'
 gem "paperclip", "~> 4.1"
 gem 'foundation-icons-sass-rails'
+gem 'foundation-datetimepicker-rails'
 
 group :development do
   gem 'rails_layout'

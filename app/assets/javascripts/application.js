@@ -14,10 +14,13 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
-
+//= require foundation-datetimepicker
+//
 $(function() {
   $(document).foundation();
 });
-
+$( document ).ready(function() {
+ $('#dp1').fdatepicker();
+});
 //
 //= require turbolinks
