@@ -70,6 +70,6 @@ class ProjectIssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_issue_params
-      params.require(:project_issue).permit(:name, :code_lang_id, :project_id, :summary)
+      params.require(:project_issue).permit(:name, :project_id, :summary, :priority, :status)
     end
 end

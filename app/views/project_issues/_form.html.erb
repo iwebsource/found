@@ -1,5 +1,5 @@
 <div class="row">
-<div class="large-7 columns">
+<div class="small-5 columns">
 <%= form_for(@project_issue) do |f| %>
   <% if @project_issue.errors.any? %>
     <div id="error_explanation">
@@ -14,19 +14,42 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, :required => true %>
-  </div>
-  <div class="field">
-    <%= f.label :code_lang_id, "Select Development Language" %>
-    <%= f.collection_select :code_lang_id, CodingLang.all, :id, :name, :required => true, :include_blank => 'Make a Selection' %>
+    <%= f.text_field :name, :label => 'Issue Name', :required => true, :placeholder => "Enter the Name of the Issue" %>
   </div>
   <div class="field">
     <%= f.label :project_id, "Select Project" %>
     <%= f.collection_select :project_id, Project.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.text_area :summary, :required => true %>
+    <%= f.text_area :summary, :label => 'Description of Issue', :required => true, :placeholder => "Detailed Description of the Issue " %>
   </div>
+
+ <fieldset>
+<legend>Priority and Status</legend>
+  <div class="field">
+<%= f.label :priority, "Select Priority" %>
+      <label>
+        <select name="project_issue[priority]">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </label>
+    </div>
+<br />
+  <div class="field">
+<%= f.label :status, "Current Status" %>
+      <label>
+        <select name="project_issue[status]">
+          <option value="Open">Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Closed">Closed</option>
+        </select>
+      </label>
+    </div>
+
+    </fieldset>
+
   <div class="actions">
     <%= f.submit %>
   </div>

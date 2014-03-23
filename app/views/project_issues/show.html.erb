@@ -3,23 +3,28 @@
 <div class="large-5 columns">
 <div class="panel callout radius">
 <p>
-  <strong>Name:</strong>
+  <strong>Issue Name:</strong>
   <%= @project_issue.name %>
 </p>
 
 <p>
-  <strong>Code lang:</strong>
-  <%= @project_issue.code_lang_id %>
-</p>
-
-<p>
   <strong>Project:</strong>
-  <%= @project_issue.project_id %>
+  <%= Project.find(@project_issue.project_id).name %>
 </p>
 
 <p>
-  <strong>Summary:</strong>
+  <strong>Description of Issue:</strong>
   <%= @project_issue.summary %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @project_issue.priority %>
+</p>
+
+<p>
+  <strong>Current Status:</strong>
+  <%= @project_issue.status %>
 </p>
 
 <ul class="button-group">

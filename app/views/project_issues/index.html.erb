@@ -7,7 +7,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Code lang</th>
       <th>Project</th>
       <th>Summary</th>
       <th></th>
@@ -20,7 +19,6 @@
     <% @project_issues.each do |project_issue| %>
       <tr>
         <td><%= project_issue.name %></td>
-        <td><%= project_issue.code_lang_id %></td>
         <td><%= project_issue.project_id %></td>
         <td><%= project_issue.summary %></td>
         <td><%= link_to 'Show', project_issue %></td>
