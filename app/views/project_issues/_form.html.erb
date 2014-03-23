@@ -27,29 +27,13 @@
  <fieldset>
 <legend>Priority and Status</legend>
   <div class="field">
-<%= f.label :priority, "Select Priority" %>
-      <label>
-        <select name="project_issue[priority]">
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-      </label>
-    </div>
+    <%= f.select "priority", "<option>Low</option><option>Medium</option><option>High</option>".html_safe %>
+  </div>
 <br />
   <div class="field">
-<%= f.label :status, "Current Status" %>
-      <label>
-        <select name="project_issue[status]">
-          <option value="Open">Open</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Closed">Closed</option>
-        </select>
-      </label>
-    </div>
-
-    </fieldset>
-
+    <%= f.select "status", "<option>Open</option><option>In Progress</option><option>Closed</option>".html_safe %>
+</div>
+ </fieldset>
   <div class="actions">
     <%= f.submit %>
   </div>

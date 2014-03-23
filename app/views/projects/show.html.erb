@@ -2,6 +2,8 @@
 <div class="row">
 <div class="medium-6 columns">
 <div class="panel callout radius">
+<fieldset>
+<legend>Project Overview</legend>
 <p>
   <strong>Project Name:</strong>
   <%= @project.name %>
@@ -36,11 +38,11 @@
   <strong>End date:</strong>
   <%= @project.end_date %>
 </p>
-
+</fieldset>
 <ul class="button-group">
-<li><%= link_to 'Edit Project', edit_project_path(@project), :class => 'tiny button success' %></li>
-<li><%= link_to 'Back', projects_path, :class => 'tiny button success' %></li>
-<li><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'tiny button alert' %></li>
+<li><%= link_to 'Edit Project', edit_project_path(@project), :class => 'tiny button success radius' %></li>
+<li><%= link_to 'Back', projects_path, :class => 'tiny button success radius' %></li>
+<li><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'tiny button alert radius' %></li>
 </ul>
 </div>
 </div>
