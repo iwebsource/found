@@ -19,7 +19,7 @@
     <% @project_issues.each do |project_issue| %>
       <tr>
         <td><%= project_issue.name %></td>
-        <td><%= project_issue.project_id %></td>
+        <td> <%= Project.find(project_issue.project_id).name %></td>
         <td><%= project_issue.summary %></td>
         <td><%= link_to 'Show', project_issue %></td>
         <td><%= link_to 'Edit', edit_project_issue_path(project_issue) %></td>
