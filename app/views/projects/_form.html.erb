@@ -29,7 +29,7 @@
     <%= f.collection_select :code_lang_id, CodingLang.all, :id, :name %>
   </div>
   <div class="field">
-    <%= f.text_area :description, :label => 'Project Description', :required => true, :placeholder => "Enter the details about your Project." %>
+    <%= f.text_area :description, :label => 'Project Description', :required => true, :placeholder => "Enter the details about your Project.", rows: 8 %>
   </div>
 
  <fieldset>

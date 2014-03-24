@@ -27,6 +27,11 @@ end
    parent :projects
  end
 
+  crumb :project_issues_edit do
+   link "Edit Project Issue", edit_project_issue_path
+   parent :projects
+ end
+
  crumb :project_issue do |project_issue|
    link project_issue.name, project_issues_path(project_issue)
    parent :project_issues
@@ -39,6 +44,11 @@ end
 
    crumb :project_edit do
    link "Edit Project", edit_project_path
+   parent :projects
+ end
+
+   crumb :project_overview do
+   link "Project Overview", @project
    parent :projects
  end
 
