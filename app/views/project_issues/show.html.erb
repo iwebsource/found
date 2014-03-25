@@ -14,17 +14,17 @@
 
 <p>
   <strong>Description of Issue:</strong>
-  <%= @project_issue.summary %>
+  <%= simple_format(@project_issue.summary) %>
 </p>
 
 <p>
   <strong>Priority:</strong>
-  <%= @project_issue.priority %>
+  <%= @project_issue.priority.humanize %>
 </p>
 
 <p>
   <strong>Current Status:</strong>
-  <%= @project_issue.status %>
+  <%= @project_issue.status.humanize %>
 </p>
 
 <ul class="button-group">

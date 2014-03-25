@@ -36,25 +36,26 @@
 <table>
   <thead>
     <tr>
-      <th>Issue name</th>
-      <th>Project</th>
+      <th>Issue Name</th>
+      <th>Related Project</th>
       <th>Priority</th>
       <th>Status</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @projects.each do |project| %>
+    <% @project_issues.each do |project_issue| %>
       <tr>
-        <td><%= link_to project.name, project %></td>
-        <td><%= Product.find(project.product_id).name %></td>
-        <td><%= CodingLang.find(project.code_lang_id).name %></td>
-        <td><%= project.notes %></td>
+        <td><%= link_to project_issue.name, project_issue %></td>
+        <td><%= Project.find(project_issue.project_id).name %></td>
+        <td><%= project_issue.priority.humanize %></td>
+        <td><%= project_issue.status.humanize %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+<br />
 <br />
 </div>
 </div>

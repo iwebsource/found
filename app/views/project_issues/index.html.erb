@@ -15,8 +15,8 @@
   <tbody>
     <% @project_issues.each do |project_issue| %>
       <tr>
-        <td><%= project_issue.name %></td>
-        <td> <%= Project.find(project_issue.project_id).name %></td>
+        <td><%= link_to project_issue.name, project_issue %></td>
+        <td><%= Project.find(project_issue.project_id).name %></td>
         <td><%= project_issue.summary %></td>
       </tr>
     <% end %>
