@@ -26,6 +26,7 @@ class ProjectIssuesController < ApplicationController
   # POST /project_issues.json
   def create
     @project_issue = ProjectIssue.new(project_issue_params)
+    @project_issue.user_id = current_user.id
 
     respond_to do |format|
       if @project_issue.save
