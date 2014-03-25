@@ -39,6 +39,7 @@ rails generate migration AddCodeLangIdToProjects
 Product: Belongs to Project. Project has many projects
 rails g scaffold product name:string project_id:integer details:text
 rails g migration ProjectIssuesPriorityStatusUpdate
+rails g migration AddProjectIssueIdToProjectTable
 
 
 

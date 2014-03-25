@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_many :projects
+  has_many :project_issues, :through => :projects
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   def create
