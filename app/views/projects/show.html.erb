@@ -1,7 +1,7 @@
 <% breadcrumb :project_overview, @project.name %>
 <div class="row">
 <div class="medium-6 columns">
-<h3><i class="fi-magnifying-glass"></i> Project Overview</h3>
+<h4><i class="fi-magnifying-glass"></i> Project Overview</h4>
 <div class="panel callout radius">
 <p>
   <strong>Project Name:</strong>
@@ -47,7 +47,7 @@
 <br />
 </div>
 <div class="medium-6 columns">
-<h3><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Issue Name</b> for more details."><i class="fi-alert"></i> Project Issues</span></h3>
+<h4><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Issue Name</b> for more details."><i class="fi-alert"></i> <%= @project.name %> Issues</span></h4>
 <table>
   <thead>
     <tr>
@@ -62,7 +62,7 @@
     <% @project_issues.each do |project_issue| %>
       <tr>
         <td><%= link_to project_issue.name, project_issue %></td>
-        <td> <%= Project.find(project_issue.project_id).name %></td>
+        <td> <%= project_issue.summary %></td>
         <td><%= project_issue.priority.humanize %></td>
         <td><%= project_issue.status.humanize %></td>
       </tr>
