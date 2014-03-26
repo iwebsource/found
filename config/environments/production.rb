@@ -49,7 +49,7 @@ Found::Application.configure do
 :openssl_verify_mode => OpenSSL::SSL::VERIFY_NONE,
 :enable_starttls_auto => false
 }
-  config.action_mailer.default_url_options = { :host => 'rails.iwebdev.ca' }
+  config.action_mailer.default_url_options = { :host => 'ruby1.iwebdev.ca' }
   #config.action_mailer.delivery_method = :sendmail
   #config.action_mailer.perform_deliveries = true
   #config.action_mailer.raise_delivery_errors = true
