@@ -9,7 +9,7 @@
     <tr>
       <th>Project Name</th>
       <th>Project Type</th>
-      <th>Development Language</th>
+      <th>Language</th>
       <th>Project Summary</th>
     </tr>
   </thead>
@@ -27,7 +27,6 @@
 </table>
 <%= link_to 'Create a new Project', new_project_path, :class => 'small button radius' %>
 </div>
-<br />
 <!-- Right Section -->
 <div class="large-6 columns">
 <h3><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Project name</b> for more details."><i class="fi-alert"></i> Open Issues</span></h3>
@@ -53,6 +52,7 @@
   </tbody>
 </table>
 <%= link_to 'Create a new Issue', new_project_issue_path, :class => 'small button radius' %>
+<br />
 <br />
 <br />
 </div>

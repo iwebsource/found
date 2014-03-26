@@ -43,8 +43,8 @@ $total-columns: 12;
  $body-bg: #fff;
  $body-font-color: #222;
  //$body-font-family: "Open Sans Condensed Light";
- $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
- $body-font-weight: normal;
+ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-font-weight: 400;
  $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -120,8 +120,9 @@ $xxlarge-range: (120.063em);
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
+ $header-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-family: $body-font-family;
-// $header-font-weight: normal;
+ $header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -1204,5 +1205,5 @@ $reveal-box-shadow: 0 0 15px rgba(#000,.4);
 // $include-html-visibility-classes: $include-html-classes;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
-$include-open-sans: false !default;
+$include-open-sans: false;
 @import 'foundation';

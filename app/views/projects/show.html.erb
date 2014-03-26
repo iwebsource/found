@@ -1,9 +1,8 @@
 <% breadcrumb :project_overview, @project.name %>
 <div class="row">
 <div class="medium-6 columns">
+<h3><i class="fi-magnifying-glass"></i> Project Overview</h3>
 <div class="panel callout radius">
-<fieldset>
-<legend><h4><i class="fi-magnifying-glass"></i> Project Overview</h4></legend>
 <p>
   <strong>Project Name:</strong>
   <%= @project.name %>
@@ -38,16 +37,17 @@
   <strong>End date:</strong>
   <%= @project.end_date %>
 </p>
-</fieldset>
 <ul class="button-group">
 <li><%= link_to 'Edit Project', edit_project_path(@project), :class => 'tiny button success radius' %></li>
 <li><%= link_to 'Back', projects_path, :class => 'tiny button success radius' %></li>
 <li><%= link_to 'Delete Project', @project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'tiny button alert radius' %></li>
 </ul>
 </div>
+<br />
+<br />
 </div>
 <div class="medium-6 columns">
-<h3><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Project name</b> for more details."><i class="fi-alert"></i> Project Issues</span></h3>
+<h3><span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top radius" title="Click on the <b>Issue Name</b> for more details."><i class="fi-alert"></i> Project Issues</span></h3>
 <table>
   <thead>
     <tr>
@@ -61,7 +61,7 @@
   <tbody>
     <% @project_issues.each do |project_issue| %>
       <tr>
-        <td><%= project_issue.name %></td>
+        <td><%= link_to project_issue.name, project_issue %></td>
         <td> <%= Project.find(project_issue.project_id).name %></td>
         <td><%= project_issue.priority.humanize %></td>
         <td><%= project_issue.status.humanize %></td>
