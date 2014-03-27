@@ -1,5 +1,5 @@
 Found::Application.routes.draw do
-
+  default_url_options :host => "rails.iwebdev.ca"
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
