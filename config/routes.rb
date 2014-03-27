@@ -1,6 +1,6 @@
 Found::Application.routes.draw do
   default_url_options :host => "rails.iwebdev.ca"
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout', :sign_up => 'registration'}
   devise_for :admins, :path => '', :path_names => {:sign_in => 'admin/login', :sign_out => 'admin/logout'}
 
   mount RailsAdmin::Engine => '/admindash', :as => 'rails_admin'

@@ -1,7 +1,7 @@
 <% breadcrumb :users, @login %>
 <div class="row">
 <div class="large-3 columns">
-<h2><i class="fi-at-sign"></i> Sign in</h2>
+<h3><i class="fi-at-sign"></i> Sign in</h3>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.email_field :email, :autofocus => true, :placeholder => "Type Email Here" %></div>

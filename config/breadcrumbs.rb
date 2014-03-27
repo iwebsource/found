@@ -55,6 +55,18 @@ end
    crumb :users do
    link "Sign In", @login
  end
+
+   crumb :registration do
+   link "Account Registration", @registration
+ end
+
+   crumb :passreset do
+   link "Password Reset", @passreset
+ end
+
+   crumb :confirmpassreset do
+   link "Confirm Password Reset", @confirmpassreset
+ end
 # crumb :project_issues do |project|
 #   link "Issues", project_issues_path(project)
 #   parent :project, project
