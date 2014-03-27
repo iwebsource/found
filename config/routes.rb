@@ -3,7 +3,7 @@ Found::Application.routes.draw do
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   devise_for :admins, :path => '', :path_names => {:sign_in => 'admin/login', :sign_out => 'admin/logout'}
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admindash', :as => 'rails_admin'
   get "home/index"
   get '/about' => 'home#about'
 
