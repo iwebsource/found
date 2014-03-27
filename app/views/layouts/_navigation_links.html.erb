@@ -28,8 +28,10 @@
     <li class="divider"></li>
       <li><a href="/"><i class="fi-home"></i> Home</a></li>
       <li class="divider"></li>
-    <% if user_signed_in? %>
+     <% if admin_signed_in? %>
       <li><a href="/admin"><i class="fi-widget"></i> Admin Panel</a></li>
+      <% end %>
+        <% if user_signed_in? %>
       <li class="divider"></li>
       <li><%= link_to '<i class="fi-power"></i> Log out'.html_safe, destroy_user_session_path, method: :delete %></li>
     <% else %>

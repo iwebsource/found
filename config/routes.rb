@@ -1,13 +1,14 @@
 Found::Application.routes.draw do
   default_url_options :host => "rails.iwebdev.ca"
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :admins, :path => '', :path_names => {:sign_in => 'admin/login', :sign_out => 'admin/logout'}
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get "home/index"
   get '/about' => 'home#about'
 
-  get 'contact' => 'contact#new', :as => 'contact'
-  post 'contact' => 'contact#create'
+  #get 'contact' => 'contact#new', :as => 'contact'
+  #post 'contact' => 'contact#create'
 
   resources :coding_langs
 
@@ -16,8 +17,6 @@ Found::Application.routes.draw do
   resources :projects
 
   resources :home
-
-  resources :status_tables
 
   resources :products
 

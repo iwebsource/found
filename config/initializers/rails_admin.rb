@@ -1,12 +1,17 @@
 RailsAdmin.config do |config|
-
   ### Popular gems integration
 
   ## == Devise ==
+   #config.authenticate_with do
+   #  warden.authenticate! scope: :user
+   #end
+
    config.authenticate_with do
-     warden.authenticate! scope: :user
-   end
-   config.current_user_method(&:current_user)
+  warden.authenticate! scope: :admin
+end
+config.current_user_method &:current_admin
+
+  #config.current_user_method(&:current_user)
   ## == Cancan ==
   # config.authorize_with :cancan
 
@@ -28,7 +33,7 @@ RailsAdmin.config do |config|
 
     ## With an audit adapter, you can add:
     # history_index
-    ADMIN_EMAILS = ['iwebsource1@gmail.com']
+    ADMIN_EMAILS = ['iwebsource@eastlink.com']
     # history_show
   end
 end
