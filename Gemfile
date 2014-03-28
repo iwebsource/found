@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'cancancan', '~> 1.7'
 gem 'foundation-rails'
 gem 'foundation_rails_helper'
 gem 'modernizr'

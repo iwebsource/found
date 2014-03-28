@@ -22,7 +22,7 @@
         <td><%= CodingLang.find(project.code_lang_id).name %></td>
         <td><%= project.notes %></td>
       </tr>
-    <% end %>
+      <% end %>
   </tbody>
 </table>
 <%= link_to 'Create a new Project', new_project_path, :class => 'small button radius' %>

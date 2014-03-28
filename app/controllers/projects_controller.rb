@@ -1,18 +1,22 @@
 class ProjectsController < ApplicationController
+  load_and_authorize_resource
   before_filter :authenticate_user!
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
-    @project_issues = ProjectIssue.all
+    @projects = Project.find_all_by_user_id current_user[:id]
+    @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
+
+    #@project = current_user.projects.find(params[:id])
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project_issues = ProjectIssue.all
+    @projects = Project.find_all_by_user_id current_user[:id]
+    @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
   end
 
   # GET /projects/new
@@ -22,6 +26,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    @project = current_user.projects.find(params[:id])
   end
 
   # POST /projects
@@ -46,6 +51,7 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
+
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { head :no_content }
       else
@@ -73,6 +79,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :product_id, :start_date, :end_date, :notes, :code_lang_id, :description)
+      params.require(:project).permit(:name, :product_id, :start_date, :end_date, :notes, :code_lang_id, :description, :user_id)
     end
 end

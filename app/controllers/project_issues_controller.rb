@@ -1,16 +1,20 @@
 class ProjectIssuesController < ApplicationController
+  load_and_authorize_resource
   before_filter :authenticate_user!
   before_action :set_project_issue, only: [:show, :edit, :update, :destroy]
 
   # GET /project_issues
   # GET /project_issues.json
   def index
-    @project_issues = ProjectIssue.all
+    @projects = Project.find_all_by_user_id current_user[:id]
+    @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
   end
 
   # GET /project_issues/1
   # GET /project_issues/1.json
   def show
+    @projects = Project.find_all_by_user_id current_user[:id]
+    @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
   end
 
   # GET /project_issues/new
@@ -71,6 +75,6 @@ class ProjectIssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_issue_params
-      params.require(:project_issue).permit(:name, :project_id, :summary, :priority, :status)
+      params.require(:project_issue).permit(:name, :project_id, :summary, :priority, :status, :user_id)
     end
 end
