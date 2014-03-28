@@ -1,7 +1,7 @@
 class ProjectIssuesController < ApplicationController
-  load_and_authorize_resource
   before_filter :authenticate_user!
   before_action :set_project_issue, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /project_issues
   # GET /project_issues.json
@@ -20,6 +20,8 @@ class ProjectIssuesController < ApplicationController
   # GET /project_issues/new
   def new
     @project_issue = ProjectIssue.new
+    @project_id_current_user = Project.find_all_by_user_id current_user[:id]
+
   end
 
   # GET /project_issues/1/edit

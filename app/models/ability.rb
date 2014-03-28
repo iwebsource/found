@@ -7,8 +7,8 @@ class Ability
        if user.role == 'user'
         can :manage, Project, :user_id => user.id
         can :manage, ProjectIssue, :user_id => user.id
-    end
 
+end
 #    can :manage, Project do |project|
 #    project.user_id == user.id
 #end

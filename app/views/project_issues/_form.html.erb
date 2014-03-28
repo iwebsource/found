@@ -18,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :project_id, "Select Project" %>
-    <%= f.collection_select :project_id, Project.where("user_id = ?", params[:user_id]), :id, :name %>
+    <%= f.collection_select :project_id, @project_id_current_user, :id, :name %>
   </div>
   <div class="field">
     <%= f.text_area :summary, :label => 'Description of Issue', :required => true, :placeholder => "Detailed Description of the Issue", rows: 8 %>
@@ -27,11 +27,11 @@
  <fieldset>
 <legend>Priority and Status</legend>
   <div class="field">
-    <%= f.collection_select( :priority, ProjectIssue::PRIORITY_STATUS, :to_s, :humanize, {:prompt => 'Select..'}) %>
+    <%= f.collection_select( :priority, ProjectIssue::PRIORITY_STATUS, :to_s, :humanize, {:prompt => 'Please Select'}) %>
   </div>
 <br />
   <div class="field">
-    <%= f.collection_select( :status, ProjectIssue::ISSUE_STATUS, :to_s, :humanize, {:prompt => 'Select..'}) %>
+    <%= f.collection_select( :status, ProjectIssue::ISSUE_STATUS, :to_s, :humanize, {:prompt => 'Please Select'}) %>
 </div>
  </fieldset>
   <div class="actions">
