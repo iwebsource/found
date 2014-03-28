@@ -26,6 +26,7 @@ class ProjectIssuesController < ApplicationController
 
   # GET /project_issues/1/edit
   def edit
+    @project_id_current_user = Project.find_all_by_user_id current_user[:id]
   end
 
   # POST /project_issues
