@@ -27,15 +27,20 @@ end
    parent :projects
  end
 
+ crumb :project_issue_new do
+   link "New Project Issue", new_project_issue_path
+   parent :projects
+ end
+
   crumb :project_issues_edit do
    link "Edit Project Issue", edit_project_issue_path
    parent :projects
  end
 
- crumb :project_issue do |project_issue|
-   link project_issue.name, project_issues_path(project_issue)
-   parent :project_issues
- end
+ #crumb :project_issue do |project_issue|
+ #  link project_issue.name, project_issues_path(project_issue)
+ #  parent :project_issues
+ #end
 
   crumb :project_new do
    link "New Project", new_project_path
