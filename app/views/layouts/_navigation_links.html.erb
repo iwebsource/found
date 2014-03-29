@@ -37,9 +37,11 @@
       <% end %>
         <% if user_signed_in? %>
       <li class="divider"></li>
+      <li><a href="/edit"><i class="fi-lock"></i> Edit Account</a></li>
+      <li class="divider"></li>
       <li><%= link_to '<i class="fi-power"></i> Log out'.html_safe, destroy_user_session_path, method: :delete %></li>
     <% else %>
-      <li class="divider"></li>
+  <li class="divider"></li>
       <li><a href="/login"><i class="fi-lock"></i> Sign In</a></li>
     <% end %>
     <li class="divider"></li>

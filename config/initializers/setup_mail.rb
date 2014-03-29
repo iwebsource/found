@@ -1,11 +1,11 @@
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-:address => "mail.iwebdev.ca",
-:port => 25,
-:domain => "iwebdev.ca",
-:user_name => "admin@iwebdev.ca",
-:password => "Johnadam2",
+:address => "smtp.mandrillapp.com",
+:port => 587,
+#:domain => "iwebdev.ca",
+:user_name => "iwebsource1@gmail.com",
+:password => "gtPFeg2ihF_qKyXb9wjdZg",
 :authentication => "plain",
 :enable_starttls_auto => true,
-:openssl_verify_mode  => "none"
+#:openssl_verify_mode  => "none"
 }

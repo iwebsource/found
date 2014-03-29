@@ -46,7 +46,7 @@ rails g migration ProjectIssuesPriorityStatusUpdate
 rails g migration AddProjectIssueIdToProjectTable
 rails g migration AddUserIdToProjectProjectIssues
 rails g migration DropStatusTable
-
+rails g migration AddFullNameToUserTable
 
 
 
