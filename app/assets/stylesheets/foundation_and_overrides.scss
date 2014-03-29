@@ -5,7 +5,7 @@
 //
 // FOUNDATION SETTINGS
 //
-
+@charset "UTF-8";
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
 
@@ -1139,7 +1139,7 @@ $reveal-box-shadow: 0 0 20px rgba(#000,.4);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
- $topbar-title-weight: bold;
+// $topbar-title-weight: bold;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
@@ -1162,7 +1162,7 @@ $reveal-box-shadow: 0 0 20px rgba(#000,.4);
  $topbar-link-bg-hover: #008CBA;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-// $topbar-link-font-family: $body-font-family;
+ $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: $topbar-height / 3;
 
