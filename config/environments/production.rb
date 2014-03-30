@@ -39,10 +39,8 @@ Found::Application.configure do
 config.action_mailer.smtp_settings = {
   :address   => "smtp.mandrillapp.com",
   :port      => 587,
-  :user_name => "iwebsource1@gmail.com",
-  :password  => "gtPFeg2ihF_qKyXb9wjdZg"
-  #:user_name => ENV["MANDRILL_USERNAME"],
-  #:password  => ENV["MANDRILL_API_KEY"]
+  :user_name => ENV["EMAIL_USERNAME"],
+  :password  => ENV["EMAIL_PASSWORD"]
 }
 
   # Specifies the header that your server uses for sending files.
