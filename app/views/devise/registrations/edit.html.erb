@@ -16,12 +16,12 @@
   <br />
   <br />
   <div><i>(leave blank if you don't want to change it)</i>
-  <%= f.password_field :password, :autocomplete => "off", :placeholder => "Change Password Field" %>
-  <%= f.password_field :password_confirmation, :placeholder => "Confirm Change Password" %></div>
+  <%= f.password_field :password, :autocomplete => "off", autocomplete: "off", :placeholder => "Change Password Field" %>
+  <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm Change Password" %></div>
 <br />
 <br />
   <div><i>(We need your current password to confirm your changes)</i>
-  <%= f.password_field :current_password %></div>
+  <%= f.password_field :current_password, autocomplete: "off" %></div>
 
   <div><%= f.submit "Update" %></div>
 <% end %>
