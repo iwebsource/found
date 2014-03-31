@@ -1,23 +1,25 @@
+<% breadcrumb :contact, @contact_path %>
 <div class="row">
-<div class="large-6 columns">
+<div class="large-3 columns">
+<h3><i class="fi-mail"></i> Contact Me</h3>
 <%= form_for @message, :url => contact_path do |form| %>
-<fieldset class="fields">
 <div class="field">
-<%= form.text_field :name %>
+<%= form.text_field :name, :placeholder => "Enter your Name here" %>
 </div>
 <div class="field">
-<%= form.text_field :email %>
+<%= form.text_field :email, :placeholder => "email@example.com" %>
 </div>
 <div class="field">
-<%= form.text_field :subject %>
+<%= form.text_field :subject, :placeholder => "Enter a Summary" %>
 </div>
 <div class="field">
-<%= form.text_area :body %>
+<%= form.text_area :body, :placeholder => "Enter your Message here" %>
 </div>
-</fieldset>
-<fieldset class="actions">
+<div class="actions">
 <%= form.submit "Send" %>
-</fieldset
 <% end %>
+</div>
+<br />
+<br />
 </div>
 </div>

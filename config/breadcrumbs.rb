@@ -11,6 +11,10 @@ crumb :about do
   link "About", root_path, title: "Welcome!"
 end
 
+ crumb :contact do
+   link "Contact Me", contact_path
+ end
+
 ## Project Section ##
 
  crumb :projects do

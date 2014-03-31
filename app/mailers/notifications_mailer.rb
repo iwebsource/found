@@ -1,7 +1,7 @@
 class NotificationsMailer < ActionMailer::Base
 
 	default :from => "noreply@iwebdev.ca"
-	default :to => "admin@iwebdev.ca"
+	default :to => "iwebsource@eastlink.ca"
 
 	def new_message(message)
 		@message = message
