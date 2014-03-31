@@ -9,8 +9,11 @@ Found::Application.routes.draw do
   get "home/index"
   get '/about' => 'home#about'
 
-  #get 'contact' => 'contact#new', :as => 'contact'
-  #post 'contact' => 'contact#create'
+
+  #match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  #match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  get 'contact' => 'contact#new', :as => 'contact'
+  post 'contact' => 'contact#create'
 
   resources :coding_langs
 
