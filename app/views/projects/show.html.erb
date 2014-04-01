@@ -1,5 +1,4 @@
 <% breadcrumb :project_overview, @project.name %>
-<%= debug @project_ids %>
 <div class="row">
 <div class="medium-6 columns">
 <h4><i class="fi-magnifying-glass"></i> Project Overview</h4>
@@ -60,7 +59,7 @@
   </thead>
 
   <tbody>
-    <% @project_issues.each do |project_issue| %>
+    <% @issues.each do |project_issue| %>
       <tr>
         <td><%= link_to project_issue.name, project_issue %></td>
         <td> <%= project_issue.summary %></td>
