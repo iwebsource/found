@@ -15,6 +15,7 @@ class ProjectIssuesController < ApplicationController
   def show
     @projects = Project.find_all_by_user_id current_user[:id]
     @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
+    @project = @project_issue.project
   end
 
   # GET /project_issues/new
