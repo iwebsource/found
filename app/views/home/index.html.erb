@@ -3,22 +3,28 @@
 	<div class="orbit-container">
 		<ul data-orbit=''>
   			<li data-orbit-slide="1" style="background-color:white; text-align:center;">
-				<img class="orbit_img th" src="/images/banner1.png" alt="slide 1" />
+				<%= image_tag("/images/banner3.jpg", alt:"slide 1", class:"orbit_img th") %>
   			</li>
   			<li data-orbit-slide="2" style="background-color:white; text-align:center;">
-    			<img class="orbit_img th" src="/images/banner2.png" alt="slide 2" />
+    			<%= image_tag("/images/banner2.png", alt:"slide 2", class:"orbit_img th") %>
   			</li>
   			<li data-orbit-slide="3" style="background-color:white; text-align:center;">
-    			<img class="orbit_img th" src="/images/banner3.jpg" alt="slide 3" />
+    			<%= image_tag("/images/banner1.png", alt:"slide 3", class:"orbit_img th") %>
   			</li>
 		</ul>
 	</div>
 </div>
 <br />
 <div id="homeTop" class="row">
-     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal"><img class="th" src="/images/ruby_rails_slide.jpg" alt="Riding the Rails" /></a></div>
-     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal2"><img class="th" src="/images/zurb-foundation.jpg" alt="Powerfil Frontend Framework" /></a></div>
-     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal3"><img class="th" src="/images/geek-binary.jpg" alt="and more features" /></a></div>
+     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal">
+     <%= image_tag("/images/ruby_rails_slide.jpg", alt:"Riding the Rails", class:"th") %></a>
+     </div>
+     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal2">
+     <%= image_tag("/images/zurb-foundation.jpg", alt:"Powerful Frontend Framework", class:"th") %></a>
+     </div>
+     <div class="medium-4 columns"><a href="#" data-reveal-id="myModal3">
+     <%= image_tag("/images/geek-binary.jpg", alt:"Combined for Excellence", class:"th") %></a>
+     </div>
 </div>
 <br />
 <br />
