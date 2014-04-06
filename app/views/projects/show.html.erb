@@ -15,12 +15,12 @@
 
 <p>
   <strong>Project Type:</strong>
-  <%= Product.find(@project.product_id).name %>
+  <%= @project_type %>
 </p>
 
 <p>
   <strong>Development Language:</strong>
-  <%= CodingLang.find(@project.code_lang_id).name %>
+  <%= @dev_lang %>
 </p>
 
 <p>

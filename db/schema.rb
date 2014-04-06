@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401215451) do
+ActiveRecord::Schema.define(version: 20140406002831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20140401215451) do
     t.integer  "project_id"
   end
 
+  add_index "coding_langs", ["project_id"], name: "index_coding_langs_on_project_id", using: :btree
+
   create_table "products", force: true do |t|
     t.string   "name"
     t.integer  "project_id"
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(version: 20140401215451) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "products", ["project_id"], name: "index_products_on_project_id", using: :btree
 
   create_table "project_issues", force: true do |t|
     t.string   "name"
@@ -60,6 +64,9 @@ ActiveRecord::Schema.define(version: 20140401215451) do
     t.string   "status"
     t.integer  "user_id"
   end
+
+  add_index "project_issues", ["project_id"], name: "index_project_issues_on_project_id", using: :btree
+  add_index "project_issues", ["user_id"], name: "index_project_issues_on_user_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -73,6 +80,9 @@ ActiveRecord::Schema.define(version: 20140401215451) do
     t.text     "description"
     t.integer  "user_id"
   end
+
+  add_index "projects", ["product_id"], name: "index_projects_on_product_id", using: :btree
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",     null: false

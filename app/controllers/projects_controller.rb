@@ -8,15 +8,14 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.find_all_by_user_id current_user[:id]
     @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
-
-    #@project = current_user.projects.find(params[:id])
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
-    @project_issues = ProjectIssue.find_all_by_user_id current_user[:id]
     @issues=@project.project_issues
+    @project_type = Product.find(@project.product_id).name
+    @dev_lang = CodingLang.find(@project.code_lang_id).name
   end
 
   # GET /projects/new

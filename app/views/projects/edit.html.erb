@@ -3,7 +3,7 @@
 <div class="medium-6 columns">
 <h1><small><i class="fi-widget"></i> Editing project</small></h1>
 
-<%= render 'form' %>
+<%= render 'form', :project => @project %>
 
 <%= link_to 'Show', @project %> |
 <%= link_to 'Back', projects_path %>

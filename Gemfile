@@ -47,6 +47,7 @@ group :development do
   gem 'rails_layout'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rails_best_practices'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
