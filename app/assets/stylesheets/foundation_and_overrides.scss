@@ -49,6 +49,7 @@ $total-columns: 12;
 
 // We use this to control font-smoothing
  $font-smoothing: antialiased;
+ .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 // We use these to control text direction settings
 // $text-direction: ltr;

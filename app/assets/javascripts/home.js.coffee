@@ -12,3 +12,7 @@ $(document).foundation orbit:
   bullets: true
   fluid: true
   next_on_click: true
+
+$("a.custom-close-reveal-modal").click ->
+  $("#myModal3").foundation "reveal", "close"
+  return
