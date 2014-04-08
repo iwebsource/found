@@ -67,27 +67,4 @@ height: 30px;
 	border-bottom: 1px solid #ddd;
 }
 
-#StaticTop {
-	background-color: #eee;
-	height: 75px;
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	border-top:    1px solid  #000;
-	border-bottom: 1px solid #000;
-}
-
-textarea
-{
-   font-size: 10pt;
-}
-
-.global{border-top:1px solid rgba(0,0,0,0.1)}
-.zurb-footer-top .global .footer-link-block{font-weight:normal;display:block;margin:30px 0 0 0}
-.footer-link-block.services{background:url(../images/marketing/icons/footer-studios.png?1395956387) 5px top no-repeat}
-.zurb-footer-top .global .footer-link-block.foundation{background:url(../images/marketing/icons/footer-foundation.png?1395956387) 5px top no-repeat}
-.zurb-footer-top .global .footer-link-block.apps{background:url(../images/marketing/icons/footer-products.png?1395956387) 5px top no-repeat}
-.zurb-footer-top .global .footer-link-block.expo{background:url(../images/marketing/icons/footer-expo.png?1395956387) 5px top no-repeat}
-.zurb-footer-top .global .footer-link-block span{display:block;color:#555;font-size:12px;padding-left:40px;line-height:18px}
-.zurb-footer-top .global .footer-link-block span.title{font-size:18px;margin-bottom:5px}
-.zurb-footer-top .global .footer-link-block span{font-size:11px !important;margin-bottom:5px}
+textarea {font-size: 10pt;}
